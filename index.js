@@ -10,10 +10,11 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY
 });
 
-app.get("/", (req, res) => {
-  res.send("Ninja Oracle API is running 🥷");
+app.post("/generate", async (req, res) => {
+  res.json({
+    result: "…the moon sees what you tried to hide."
+  });
 });
-
 app.post("/generate", async (req, res) => {
   const { input } = req.body;
 
