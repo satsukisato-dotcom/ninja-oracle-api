@@ -35,7 +35,9 @@ Answer in one short, mysterious sentence.
     result: response.content[0].text
   });
 });
-
+app.get("/", (req, res) => {
+  res.send("Ninja Oracle API is running 🥷");
+});
 app.listen(3000, () => {
   console.log("Ninja Oracle API is running 🥷");
 });
