@@ -26,7 +26,7 @@ app.post("/generate", async (req, res) => {
     }
 
     const response = await client.messages.create({
-      model: "claude-3-5-haiku-latest",
+      model: "claude-3-haiku-20240307",
       max_tokens: 120,
       messages: [
         {
